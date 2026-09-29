@@ -1,0 +1,9 @@
+[package]
+name = "sync_http_server"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[dependencies]
+requestrail-core   = { workspace = true }
+requestrail-guards = { workspace = true }

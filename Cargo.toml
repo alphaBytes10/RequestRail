@@ -1,0 +1,60 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/requestrail-core",
+    "crates/requestrail-guards",
+    "crates/requestrail-http",
+    "crates/requestrail-llm",
+    "crates/requestrail-config",
+    "examples/sync_http_server",
+    "examples/axum_middleware",
+    "examples/llm_chat_guard",
+    "examples/observability",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/PLACEHOLDER/RequestRail"
+description = "A Rust security & policy gateway for distributed services"
+
+[workspace.dependencies]
+requestrail-core   = { path = "crates/requestrail-core" }
+requestrail-guards = { path = "crates/requestrail-guards" }
+requestrail-http   = { path = "crates/requestrail-http" }
+requestrail-llm    = { path = "crates/requestrail-llm" }
+
+serde       = { version = "1", features = ["derive"] }
+serde_json  = "1"
+thiserror   = "1"
+tracing     = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+regex       = "1"
+hmac        = "0.12"
+sha2        = "0.10"
+hex         = "0.4"
+uuid        = { version = "1", features = ["v4"] }
+chrono      = { version = "0.4", features = ["serde"] }
+parking_lot = "0.12"
+dashmap     = "6"
+
+# HTTP / async
+axum        = "0.7"
+tower       = "0.4"
+tower-http  = { version = "0.5", features = ["full"] }
+tokio       = { version = "1", features = ["full"] }
+http        = "1"
+http-body-util = "0.1"
+bytes       = "1"
+hyper       = { version = "1", features = ["full"] }
+
+# Testing
+criterion   = { version = "0.5", features = ["html_reports"] }
+proptest    = "1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

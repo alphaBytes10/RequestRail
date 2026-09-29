@@ -1,0 +1,15 @@
+[package]
+name = "requestrail-llm"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "LLM-specific guard wrappers for RequestRail"
+
+[dependencies]
+requestrail-core   = { workspace = true }
+requestrail-guards = { workspace = true }
+serde       = { workspace = true }
+serde_json  = { workspace = true }
+tracing     = { workspace = true }

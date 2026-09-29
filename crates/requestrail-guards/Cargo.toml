@@ -1,0 +1,27 @@
+[package]
+name = "requestrail-guards"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Security guard implementations for RequestRail"
+
+[dependencies]
+requestrail-core = { workspace = true }
+serde       = { workspace = true }
+serde_json  = { workspace = true }
+regex       = { workspace = true }
+hmac        = { workspace = true }
+sha2        = { workspace = true }
+hex         = { workspace = true }
+chrono      = { workspace = true }
+parking_lot = { workspace = true }
+dashmap     = { workspace = true }
+tracing     = { workspace = true }
+uuid        = { workspace = true }
+redis       = { version = "0.25.3", features = ["r2d2"] }
+r2d2        = "0.8"
+
+[dev-dependencies]
+proptest = { workspace = true }

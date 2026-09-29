@@ -1,0 +1,15 @@
+[package]
+name = "requestrail-config"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "YAML configuration loader for RequestRail pipelines"
+
+[dependencies]
+requestrail-core = { workspace = true }
+requestrail-guards = { workspace = true }
+serde = { workspace = true }
+serde_yaml = "0.9"
+tracing = { workspace = true }

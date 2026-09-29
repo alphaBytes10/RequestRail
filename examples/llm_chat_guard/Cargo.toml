@@ -1,0 +1,10 @@
+[package]
+name = "llm_chat_guard"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[dependencies]
+requestrail-core   = { workspace = true }
+requestrail-llm    = { workspace = true }
+requestrail-guards = { workspace = true }

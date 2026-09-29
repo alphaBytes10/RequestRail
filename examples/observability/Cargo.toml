@@ -1,0 +1,11 @@
+[package]
+name = "observability"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[dependencies]
+requestrail-core   = { workspace = true }
+requestrail-guards = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
